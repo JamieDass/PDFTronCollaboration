@@ -13,7 +13,7 @@ class PDFTronCollaborationCoreDataManager {
     init() {
         let modelName = "PDFTronCollaborationAnnotationModel"
 
-        let PDFTronCollaborationBundle = Bundle(for: type(of: self))
+        let PDFTronCollaborationBundle = Bundle.module
         guard let modelURL = PDFTronCollaborationBundle.url(forResource: modelName, withExtension:"momd") else {
                 fatalError("Error loading model from bundle")
         }
