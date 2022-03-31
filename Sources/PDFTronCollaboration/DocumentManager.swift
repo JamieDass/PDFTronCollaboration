@@ -95,6 +95,8 @@ class DocumentManager
                    let document = data.document {
                     let doc = self.documentFromServerEntity(serverDocument: document, collabClient: collabClient)
                     completionHandler(doc)
+                } else {
+                    completionHandler(nil)
                 }
             case .failure(let error):
                 collabClient.processGraphQLError(error: error)
